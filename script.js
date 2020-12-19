@@ -24,17 +24,17 @@ function amountOfPaint(amount) {
             var finalTwo = noResteTwo / 10;
             if (resteTwo != 0) {
                 // console.log("et il faut acheter " + ( finalTwo + 1 ) + " pots de 5kg");
-                render.innerHTML += "et il faut acheter " + ( finalTwo + 1 ) + " pots de 5kg";
+                render.innerHTML += " et il faut acheter " + ( finalTwo + 1 ) + " pots de 5kg";
             }
             else {
                 // console.log("et il faut acheter " + finalTwo + " pots de 5kg");
-                render.innerHTML += "et il faut acheter " + finalTwo + " pots de 5kg";
+                render.innerHTML += " et il faut acheter " + finalTwo + " pots de 5kg";
             }
         }
         else {
             if (reste != 0) {
                 // console.log("et il faudrat un pot de 5 kg");
-                render.innerHTML += "et il faudrat un pot de 5 kg";
+                render.innerHTML += " et il faudrat un pot de 5 kg";
             }
         }
     }
