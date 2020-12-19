@@ -17,7 +17,7 @@ function amountOfPaint(amount) {
         var  noReste = num - reste;
         var final = noReste / 50;
         // console.log("il faut acheter " + final + " pot de 25kg");
-        render.innerHTML = "il faut acheter " + final + " pot de 25kg";
+        render.innerHTML = "Il faut acheter " + final + " pot de 25kg";
         if (reste >= 10) {
             var resteTwo = reste % 10;
             var noResteTwo = reste - resteTwo;
@@ -43,20 +43,30 @@ function amountOfPaint(amount) {
             var noResteThree = num - resteThree;
             var finalThree = noResteThree / 10;
             if (resteThree != 0) {
-                // console.log("il faut acheter " + ( finalThree + 1 ) + " pots de 5kg");
-                render.innerHTML = "il faut acheter " + ( finalThree + 1 ) + " pots de 5kg";
+                if (finalThree + 1 == 5){
+                    // console.log("il faut acheter 1 pot de 25kg");
+                    render.innerHTML = "Il faut acheter 1 pot de 25kg";
+                }
+                else {
+                    // console.log("il faut acheter " + ( finalThree + 1 ) + " pots de 5kg");
+                    render.innerHTML = "Il faut acheter " + ( finalThree + 1 ) + " pots de 5kg";
+                }
             }
             else {
                 // console.log("il faut acheter " + finalThree + " pots de 5kg");
-                render.innerHTML = "il faut acheter " + finalThree + " pots de 5kg";
+                render.innerHTML = "Il faut acheter " + finalThree + " pots de 5kg";
             }
     }
     else if (10 > num && num > 0) {
         // console.log("il faudrat un pot de 5 kg");
-        render.innerHTML = "il faudrat un pot de 5 kg";
+        render.innerHTML = "Il faudrat un pot de 5 kg";
     }
     else {
         // console.log('il faut rentrer un nombre positif different de 0');
-        render.innerHTML = "il faut rentrer un nombre positif different de 0";
+        render.innerHTML = "Il faut rentrer un nombre positif different de 0";
     }
 }
+
+document.getElementById("button").addEventListener("click", function () {
+    amountOfPaint(numberPlace.value);
+  });
